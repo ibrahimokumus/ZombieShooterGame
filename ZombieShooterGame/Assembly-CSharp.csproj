@@ -64,6 +64,7 @@
     <Compile Include="Assets\Small Fire Pack\Scripts\CreateFireballs.cs" />
     <Compile Include="Assets\Scripts\FireController.cs" />
     <Compile Include="Assets\VFX\MuzzleFlashes\Scripts\MaterialType.cs" />
+    <Compile Include="Assets\Scripts\HealthBarController.cs" />
     <Compile Include="Assets\Small Fire Pack\Scripts\Demo.cs" />
     <Compile Include="Assets\Scripts\ParticleEffectController.cs" />
     <Compile Include="Assets\VFX\MuzzleFlashes\Scripts\FPSLightCurves.cs" />

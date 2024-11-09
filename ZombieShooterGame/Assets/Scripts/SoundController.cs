@@ -36,7 +36,7 @@ public class SoundController : MonoBehaviour
     private void Start()
     {
         
-        PlayBackgroundMusic();
+        //PlayBackgroundMusic();
     }
 
     // Arka plan müziðini çalma fonksiyonu

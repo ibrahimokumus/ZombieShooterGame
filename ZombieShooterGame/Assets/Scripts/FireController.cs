@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class FireController : MonoBehaviour
 {
-    RaycastHit hit;
-    public Transform spawnPos;
+   
+   
     public bool canFire =true;
     public float gunTimer;
     public float autoFireRate;
@@ -31,16 +31,22 @@ public class FireController : MonoBehaviour
 
         bulletCount -= 1;
         bulletText.text = bulletCount.ToString() +" / "+ totalBullet.ToString();
+        RaycastHit hit;
+       
 
-        if (Physics.Raycast(spawnPos.transform.position, spawnPos.transform.forward, out hit, distance))
+        Vector3 rayOrigin = Camera.main.transform.position; // kamera konumu
+        Vector3 rayDirection = Camera.main.transform.forward; // kamera yonu
+        Debug.DrawRay(rayOrigin, rayDirection * distance, Color.red, 20f);
+
+        if (Physics.Raycast(rayOrigin, rayDirection, out hit, distance))
         {
-          
             Debug.Log("Isabet eden nesne: " + hit.transform.name);
-          /*  if (hit.transform.CompareTag("Enemy"))
-            {
-                //Damage methodunu cagir
 
-            }*/
+            if (hit.transform.CompareTag("Enemy"))
+            {
+                // Damage methodunu cagir
+            }
         }
+
     }
 }

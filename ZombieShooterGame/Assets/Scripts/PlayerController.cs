@@ -28,21 +28,22 @@ public class PlayerController : MonoBehaviour
 
     #region Deneme
     FireController fireController;
+    HealthBarController healthBarController;
     #endregion
     private void Start()
     {
         characterController = GetComponent<CharacterController>();
+        healthBarController = FindObjectOfType<HealthBarController>();
+        fireController = GetComponent<FireController>();
         animator = GetComponent<Animator>();
-        //jumpButton.onClick.AddListener(Jump);// Ziplama butonunu dinle
 
         Cursor.visible = false; // Mouse görünmez yap
         Cursor.lockState = CursorLockMode.Locked;
 
         povComponent = virtualCamera.GetCinemachineComponent<CinemachinePOV>();
         orijinalCamPos= virtualCamera.transform.position;
-        InvokeRepeating("Damage", 3f,1f);
 
-        fireController = GetComponent<FireController>();
+        
     }
 
     private void Update()
@@ -121,15 +122,16 @@ public class PlayerController : MonoBehaviour
     {
         // Mouse X hareketini oku
         float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
-
+        float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
         // Karakteri saða-sola döndür
         transform.Rotate(Vector3.up, mouseX);
-
+       // transform.Rotate(Vector3.left, mouseY);
         // Kameranýn yatay eksenini karakterin y eksenine göre ayarla
         povComponent.m_HorizontalAxis.Value = transform.eulerAngles.y;
 
     }
 
+    
     void ReloadingRifle()
     {
         if (Input.GetKeyDown(KeyCode.R) && fireController.bulletCount < fireController.magazinAmount && fireController.totalBullet > 0)
@@ -157,11 +159,17 @@ public class PlayerController : MonoBehaviour
        // fireController.bulletText.text = fireController.bulletCount.ToString();
         fireController.canFire = true;
     }
-/*
-    void TakeDamage()
-    {
 
-        animator.SetTrigger("GetHitTrigger");
-        canMove= false;
-    }*/
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.CompareTag("Enemy"))
+        {
+            healthBarController.Damage(10);
+            Debug.Log(collider.gameObject.name);
+        }
+        
+    }
+
+   
 }
