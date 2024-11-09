@@ -13,28 +13,34 @@ public class FireController : MonoBehaviour
    
     public float distance;
 
-    public int bulletAmount = 10;
+    public int bulletCount = 10;
+    public int magazinAmount = 10;
     public Text bulletText;
-
+    public int totalBullet = 100;
+    ParticleEffectController particleEffectController;
     private void Start()
     {
-        bulletText.text = bulletAmount.ToString();
+        bulletText.text = bulletCount.ToString() + " / " + totalBullet.ToString();
+        particleEffectController = FindObjectOfType<ParticleEffectController>();
     }
     public void Fire()
     {
 
         SoundController.instance.PlaySoundEffect(0);
-        bulletAmount -= 1;
-        bulletText.text = bulletAmount.ToString();
+        particleEffectController.PlayParticleEffect("Muzzle");
+
+        bulletCount -= 1;
+        bulletText.text = bulletCount.ToString() +" / "+ totalBullet.ToString();
+
         if (Physics.Raycast(spawnPos.transform.position, spawnPos.transform.forward, out hit, distance))
         {
           
             Debug.Log("Isabet eden nesne: " + hit.transform.name);
-            if (hit.transform.CompareTag("Enemy"))
+          /*  if (hit.transform.CompareTag("Enemy"))
             {
                 //Damage methodunu cagir
 
-            }
+            }*/
         }
     }
 }

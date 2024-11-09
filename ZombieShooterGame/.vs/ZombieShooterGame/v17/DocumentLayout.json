@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\assets\\scripts\\firecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|c:\\users\\okumus\\unity\\techcareer\\ibrahim-emir-proje\\zombieshootergame\\assets\\scripts\\firecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\firecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|c:\\users\\okumus\\unity\\techcareer\\ibrahim-emir-proje\\zombieshootergame\\assets\\scripts\\particleeffectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\particleeffectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|c:\\users\\okumus\\unity\\techcareer\\ibrahim-emir-proje\\zombieshootergame\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,6 +13,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\assets\\scripts\\soundcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\soundcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\assets\\scripts\\particleeffectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\particleeffectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,21 +25,20 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 184,
+          "DockedWidth": 188,
           "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ParticleEffectController.cs",
               "DocumentMoniker": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\ParticleEffectController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ParticleEffectController.cs",
               "ToolTip": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\ParticleEffectController.cs",
               "RelativeToolTip": "Assets\\Scripts\\ParticleEffectController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T14:43:28.169Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T14:43:28.169Z"
             },
             {
               "$type": "Document",
@@ -49,39 +48,38 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\FireController.cs",
               "ToolTip": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\FireController.cs",
               "RelativeToolTip": "Assets\\Scripts\\FireController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-08T13:18:56.967Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "SoundController.cs",
               "DocumentMoniker": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\SoundController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SoundController.cs",
               "ToolTip": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\SoundController.cs",
               "RelativeToolTip": "Assets\\Scripts\\SoundController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T11:12:59.78Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T11:12:59.78Z"
             }
           ]
         },
         {
-          "DockedWidth": 216,
+          "DockedWidth": 212,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
               "ToolTip": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAowI8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAowJkAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-06T12:55:25.975Z",
               "EditorCaption": ""

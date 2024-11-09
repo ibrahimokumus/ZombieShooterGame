@@ -13,7 +13,7 @@ public class SoundController : MonoBehaviour
     [SerializeField] private AudioClip[] playerClips;
 
     [SerializeField] private AudioSource backgroundAudioSource; 
-    [SerializeField] private AudioSource fxSource;         
+    public AudioSource fxSource;         
     [SerializeField] private AudioSource playerAudioSource;    
 
     public bool isPlayMusic = true;
@@ -35,6 +35,7 @@ public class SoundController : MonoBehaviour
 
     private void Start()
     {
+        
         PlayBackgroundMusic();
     }
 
@@ -86,23 +87,5 @@ public class SoundController : MonoBehaviour
         }
     }
 
-    // Efekt aç/kapat iþlevi
-    public void ToggleEffect()
-    {
-        isPlayEffect = !isPlayEffect;
-        if (!isPlayEffect)
-        {
-            fxSource.Stop();
-        }
-    }
-
-    // Yürüyüþ sesi aç/kapat iþlevi
-    public void ToggleWalking()
-    {
-        isPlayRunning = !isPlayRunning;
-        if (!isPlayRunning)
-        {
-            playerAudioSource.Stop();
-        }
-    }
+   
 }

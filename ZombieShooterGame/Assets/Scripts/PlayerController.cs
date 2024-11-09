@@ -52,7 +52,6 @@ public class PlayerController : MonoBehaviour
         if (isGrounded && _velocity.y < 0)
         {
             _velocity.y = -2;
-            virtualCamera.transform.position += new Vector3(0,-5f,0);
         }
        
 
@@ -81,14 +80,15 @@ public class PlayerController : MonoBehaviour
             _velocity.y += _gravity * Time.deltaTime;
             characterController.Move(_velocity * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.Mouse0) && fireController.canFire && Time.time > fireController.gunTimer)
+
+        if (Input.GetKeyDown(KeyCode.Mouse0) &&  Time.time > fireController.gunTimer)
         {
-            if (fireController.bulletAmount <= 0)
+            if (fireController.bulletCount <= 0 )
             {
-                Debug.Log("Mermi yok");
-                //sarjor bitti sesi cal
+                fireController.canFire = false;
+                SoundController.instance.PlaySoundEffect(1);
             }
-            else
+            else if(fireController.canFire)
             {
                 animator.SetBool("IsShooting", true);
                 canMove = false;
@@ -111,7 +111,6 @@ public class PlayerController : MonoBehaviour
     {
         if (isGrounded)
         {
-            virtualCamera.transform.position += new Vector3(0,5f,0);
             _velocity.y = Mathf.Sqrt(_jump * -2f * _gravity);
             animator.SetBool("CanJump",true);
         }
@@ -133,20 +132,30 @@ public class PlayerController : MonoBehaviour
 
     void ReloadingRifle()
     {
-        if (Input.GetKeyDown(KeyCode.R) && fireController.bulletAmount < 10)
+        if (Input.GetKeyDown(KeyCode.R) && fireController.bulletCount < fireController.magazinAmount && fireController.totalBullet > 0)
         {
             animator.SetTrigger("ReloadTrigger");
             StartCoroutine(ReloadWaiting());
-            //sarjor sesi cal
+            SoundController.instance.PlaySoundEffect(2);
         }
     }
 
 
     IEnumerator ReloadWaiting()
-    {
-        yield return new WaitForSeconds(2f);
-        fireController.bulletAmount = 10;
-        fireController.bulletText.text = fireController.bulletAmount.ToString();
+    { 
+        fireController.canFire = false;
+        yield return new WaitForSeconds(4f);
+        SoundController.instance.fxSource.Stop();
+        for (int i = fireController.bulletCount; i < fireController.magazinAmount; i++)
+        {
+            fireController.bulletCount += 1;
+            fireController.totalBullet -= 1;
+            fireController.bulletText.text = fireController.bulletCount.ToString() +" / " + fireController.totalBullet.ToString();
+            yield return new WaitForSeconds(0.05f);
+        }
+       // fireController.bulletCount = 10;
+       // fireController.bulletText.text = fireController.bulletCount.ToString();
+        fireController.canFire = true;
     }
 /*
     void TakeDamage()
