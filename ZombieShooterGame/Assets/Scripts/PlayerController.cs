@@ -2,6 +2,7 @@
 using UnityEngine;
 using Cinemachine;
 using System.Collections;
+using Unity.VisualScripting;
 
 
 
@@ -155,21 +156,33 @@ public class PlayerController : MonoBehaviour
             fireController.bulletText.text = fireController.bulletCount.ToString() +" / " + fireController.totalBullet.ToString();
             yield return new WaitForSeconds(0.05f);
         }
-       // fireController.bulletCount = 10;
-       // fireController.bulletText.text = fireController.bulletCount.ToString();
+      
         fireController.canFire = true;
     }
 
 
-    private void OnTriggerEnter(Collider collider)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collider.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy"))
         {
             healthBarController.Damage(10);
-            Debug.Log(collider.gameObject.name);
+            Debug.Log(other.gameObject.name);
         }
-        
+        if (other.gameObject.CompareTag("Bullet"))
+        {
+            fireController.PickUpAmmoTrigger(other.gameObject.GetComponent<BulletBaseClass>().bulletAmount);
+            SoundController.instance.PlayAroundSounds(0);
+            other.gameObject.SetActive(false);
+            StartCoroutine(BulletActivate(other.gameObject));
+        }
     }
 
    
+    IEnumerator BulletActivate(GameObject obj)
+    {
+        yield return new WaitForSeconds(5f);
+        obj.SetActive(true);
+    }
+
+
 }

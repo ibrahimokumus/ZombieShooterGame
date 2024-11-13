@@ -62,14 +62,18 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\SoundController.cs" />
     <Compile Include="Assets\VFX\MuzzleFlashes\Scripts\MaterialType.cs" />
+    <Compile Include="Assets\Scripts\Bullet\BulletBaseClass.cs" />
     <Compile Include="Assets\Scripts\ParticleEffectController.cs" />
     <Compile Include="Assets\VFX\MuzzleFlashes\Scripts\FPSLightCurves.cs" />
     <Compile Include="Assets\VFX\MuzzleFlashes\Scripts\FPSRandomRotateAngle.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\VFX\MuzzleFlashes\Scripts\FPSShaderColorGradient.cs" />
     <Compile Include="Assets\Small Fire Pack\Scripts\CreateFireballs.cs" />
+    <Compile Include="Assets\Scripts\Bullet\MultiBullet.cs" />
     <Compile Include="Assets\Scripts\FireController.cs" />
+    <Compile Include="Assets\Scripts\Bullet\SingleBullet.cs" />
     <Compile Include="Assets\Scripts\HealthBarController.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Small Fire Pack\Scripts\Demo.cs" />
     <Compile Include="Assets\Small Fire Pack\Scripts\Projectile.cs" />
     <Compile Include="Assets\VFX\MuzzleFlashes\Scripts\FPSShaderFloatCurves.cs" />

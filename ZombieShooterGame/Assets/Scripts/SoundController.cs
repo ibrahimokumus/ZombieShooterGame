@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,10 +12,12 @@ public class SoundController : MonoBehaviour
     [SerializeField] private AudioClip[] backgroundClips;
     [SerializeField] private AudioClip[] fxClips;
     [SerializeField] private AudioClip[] playerClips;
+    [SerializeField] private AudioClip[] fxAroundClips;
 
     [SerializeField] private AudioSource backgroundAudioSource; 
     public AudioSource fxSource;         
-    [SerializeField] private AudioSource playerAudioSource;    
+    [SerializeField] private AudioSource playerAudioSource;
+    [SerializeField] private AudioSource fxAroundAudioSource;
 
     public bool isPlayMusic = true;
     public bool isPlayEffect = true;
@@ -74,17 +77,14 @@ public class SoundController : MonoBehaviour
     }
 
     // Müzik aç/kapat iþlevi
-    public void ToggleMusic()
+    public void PlayAroundSounds(int index)
     {
-        isPlayMusic = !isPlayMusic;
-        if (isPlayMusic)
-        {
-            PlayBackgroundMusic();
-        }
-        else
-        {
-            backgroundAudioSource.Stop();
-        }
+       
+        if (fxAroundClips == null  || !fxAroundAudioSource || index < 0 || index >= fxAroundClips.Length) return;
+        
+        fxAroundAudioSource.clip = fxAroundClips[index];
+        fxAroundAudioSource.Stop();
+        fxAroundAudioSource.Play();
     }
 
    

@@ -36,7 +36,7 @@ public class FireController : MonoBehaviour
 
         Vector3 rayOrigin = Camera.main.transform.position; // kamera konumu
         Vector3 rayDirection = Camera.main.transform.forward; // kamera yonu
-        Debug.DrawRay(rayOrigin, rayDirection * distance, Color.red, 20f);
+       // Debug.DrawRay(rayOrigin, rayDirection * distance, Color.red, 20f);
 
         if (Physics.Raycast(rayOrigin, rayDirection, out hit, distance))
         {
@@ -48,5 +48,20 @@ public class FireController : MonoBehaviour
             }
         }
 
+    }
+
+    public void PickUpAmmoTrigger(int amount)
+    {
+        StartCoroutine(PickUpAmmo(amount));
+    }
+    IEnumerator PickUpAmmo(int amount)
+    {
+        // mermi toplama sesi cal
+        for (int i = 0; i < amount; i++)
+        {
+            totalBullet += 1;
+            bulletText.text = bulletCount.ToString() + " / " + totalBullet.ToString();
+            yield return new WaitForSeconds(0.05f);
+        }
     }
 }
