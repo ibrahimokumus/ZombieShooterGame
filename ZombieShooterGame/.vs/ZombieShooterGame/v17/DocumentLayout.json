@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Unity\\Techcareer\\ZombieShooterGame\\ZombieShooterGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|C:\\Unity\\Techcareer\\ZombieShooterGame\\ZombieShooterGame\\assets\\scripts\\soundcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\soundcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|c:\\unity\\techcareer\\zombieshootergame\\zombieshootergame\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|C:\\Unity\\Techcareer\\ZombieShooterGame\\ZombieShooterGame\\assets\\scripts\\healthbarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\healthbarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|C:\\Unity\\Techcareer\\ZombieShooterGame\\ZombieShooterGame\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|C:\\Unity\\Techcareer\\ZombieShooterGame\\ZombieShooterGame\\assets\\scripts\\soundcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\soundcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|C:\\Unity\\Techcareer\\ZombieShooterGame\\ZombieShooterGame\\assets\\scripts\\bullet\\bulletbaseclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,7 +27,7 @@
       "RelativeMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bullet\\multibullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|c:\\unity\\techcareer\\zombieshootergame\\zombieshootergame\\assets\\scripts\\bullet\\singlebullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|C:\\Unity\\Techcareer\\ZombieShooterGame\\ZombieShooterGame\\assets\\scripts\\bullet\\singlebullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bullet\\singlebullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -41,12 +45,12 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 193,
+          "DockedWidth": 200,
           "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "BulletBaseClass.cs",
               "DocumentMoniker": "C:\\Unity\\Techcareer\\ZombieShooterGame\\ZombieShooterGame\\Assets\\Scripts\\Bullet\\BulletBaseClass.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet\\BulletBaseClass.cs",
@@ -59,7 +63,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "MultiBullet.cs",
               "DocumentMoniker": "C:\\Unity\\Techcareer\\ZombieShooterGame\\ZombieShooterGame\\Assets\\Scripts\\Bullet\\MultiBullet.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet\\MultiBullet.cs",
@@ -67,8 +71,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Bullet\\MultiBullet.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T19:50:17.281Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T19:50:17.281Z"
             },
             {
               "$type": "Document",
@@ -80,12 +83,11 @@
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAAwCIAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T22:50:11.012Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T22:50:11.012Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "SingleBullet.cs",
               "DocumentMoniker": "C:\\Unity\\Techcareer\\ZombieShooterGame\\ZombieShooterGame\\Assets\\Scripts\\Bullet\\SingleBullet.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet\\SingleBullet.cs",
@@ -93,12 +95,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Bullet\\SingleBullet.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T19:52:45.975Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T19:52:45.975Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "FireController.cs",
               "DocumentMoniker": "C:\\Unity\\Techcareer\\ZombieShooterGame\\ZombieShooterGame\\Assets\\Scripts\\FireController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FireController.cs",
@@ -110,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ParticleEffectController.cs",
               "DocumentMoniker": "C:\\Unity\\Techcareer\\ZombieShooterGame\\ZombieShooterGame\\Assets\\Scripts\\ParticleEffectController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ParticleEffectController.cs",
@@ -123,25 +124,12 @@
           ]
         },
         {
-          "DockedWidth": 207,
+          "DockedWidth": 200,
           "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PlayerController.cs",
-              "DocumentMoniker": "C:\\Unity\\Techcareer\\ZombieShooterGame\\ZombieShooterGame\\Assets\\Scripts\\PlayerController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
-              "ToolTip": "C:\\Unity\\Techcareer\\ZombieShooterGame\\ZombieShooterGame\\Assets\\Scripts\\PlayerController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
-              "ViewState": "AQIAAJkAAAAAAAAAAAAYwK0AAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T12:55:25.975Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "SoundController.cs",
               "DocumentMoniker": "C:\\Unity\\Techcareer\\ZombieShooterGame\\ZombieShooterGame\\Assets\\Scripts\\SoundController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SoundController.cs",
@@ -149,8 +137,32 @@
               "RelativeToolTip": "Assets\\Scripts\\SoundController.cs",
               "ViewState": "AQIAAEIAAAAAAAAAAAAowFIAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T11:12:59.78Z",
+              "WhenOpened": "2024-11-08T11:12:59.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "C:\\Unity\\Techcareer\\ZombieShooterGame\\ZombieShooterGame\\Assets\\Scripts\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
+              "ToolTip": "C:\\Unity\\Techcareer\\ZombieShooterGame\\ZombieShooterGame\\Assets\\Scripts\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
+              "ViewState": "AQIAAJQAAAAAAAAAAAAAALAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T12:55:25.975Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HealthBarController.cs",
+              "DocumentMoniker": "C:\\Unity\\Techcareer\\ZombieShooterGame\\ZombieShooterGame\\Assets\\Scripts\\HealthBarController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\HealthBarController.cs",
+              "ToolTip": "C:\\Unity\\Techcareer\\ZombieShooterGame\\ZombieShooterGame\\Assets\\Scripts\\HealthBarController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\HealthBarController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T10:47:55.054Z"
             }
           ]
         }

@@ -175,6 +175,12 @@ public class PlayerController : MonoBehaviour
             other.gameObject.SetActive(false);
             StartCoroutine(BulletActivate(other.gameObject));
         }
+        if (other.gameObject.CompareTag("HealItem") && healthBarController.health < 100f)
+        {
+            healthBarController.Healing(10f);
+            SoundController.instance.PlayAroundSounds(1);
+            other.gameObject.SetActive(false);
+        }
     }
 
    

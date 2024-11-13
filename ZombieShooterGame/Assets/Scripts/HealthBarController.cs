@@ -8,13 +8,13 @@ public class HealthBarController : MonoBehaviour
     public Slider healthSlider;
     public Slider easeBarSlider;
     [SerializeField] float maxHealth = 100f;
-    [SerializeField] float health;
+    public float health;
     float animationSpeed = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
-        health = maxHealth;
+        health = maxHealth-5f;
     }
 
     // Update is called once per frame
@@ -32,12 +32,17 @@ public class HealthBarController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.T)) 
         {
-            StartCoroutine(HealAnimation(10));
+            
         }
     }
 
 
-    public IEnumerator HealAnimation(float healAmount)
+    public void Healing(float healAmount)
+    {
+        StartCoroutine(HealAnimation(healAmount));
+    }
+
+    private IEnumerator HealAnimation(float healAmount)
     {
         float newHealth = health + healAmount; 
         while (health < newHealth)
