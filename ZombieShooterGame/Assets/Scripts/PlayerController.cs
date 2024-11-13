@@ -181,6 +181,12 @@ public class PlayerController : MonoBehaviour
             SoundController.instance.PlayAroundSounds(1);
             other.gameObject.SetActive(false);
         }
+        if (other.gameObject.CompareTag("Coin"))
+        {
+            other.gameObject.transform.parent.GetComponent<CoinController>().CoinCollector();
+            SoundController.instance.PlayAroundSounds(2);
+            other.gameObject.SetActive(false);
+        }
     }
 
    
