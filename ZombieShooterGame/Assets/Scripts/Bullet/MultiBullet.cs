@@ -20,7 +20,7 @@ public class MultiBullet : BulletBaseClass
         if(other.gameObject.CompareTag("Player")) 
         {
             //fireController.PickUpAmmoTrigger(bulletAmount);
-           // gameManager.BulletsDeactivate(0);
+           //gameManager.BulletsDeactivate(0);
            
         }
     }

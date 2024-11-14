@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,11 +18,16 @@ public class FireController : MonoBehaviour
     public Text bulletText;
     public int totalBullet = 100;
     ParticleEffectController particleEffectController;
+
     private void Start()
     {
         bulletText.text = bulletCount.ToString() + " / " + totalBullet.ToString();
         particleEffectController = FindObjectOfType<ParticleEffectController>();
     }
+
+    /// <summary>
+    /// ates etme methodu
+    /// </summary>
     public void Fire()
     {
 
@@ -31,25 +36,31 @@ public class FireController : MonoBehaviour
 
         bulletCount -= 1;
         bulletText.text = bulletCount.ToString() +" / "+ totalBullet.ToString();
-        RaycastHit hit;
-       
+        Vector3 rayOrigin = Camera.main.transform.position; // Kamera konumu
+        Vector3 rayDirection = Camera.main.transform.forward; // Kamera yönü
 
-        Vector3 rayOrigin = Camera.main.transform.position; // kamera konumu
-        Vector3 rayDirection = Camera.main.transform.forward; // kamera yonu
-       // Debug.DrawRay(rayOrigin, rayDirection * distance, Color.red, 20f);
-
-        if (Physics.Raycast(rayOrigin, rayDirection, out hit, distance))
+        RaycastHit[] hits = Physics.RaycastAll(rayOrigin, rayDirection, distance);
+        foreach (RaycastHit hit in hits)
         {
-            Debug.Log("Isabet eden nesne: " + hit.transform.name);
-
-            if (hit.transform.CompareTag("Enemy"))
+            if (!hit.collider.isTrigger)
             {
-                // Damage methodunu cagir
+                Debug.Log("Isabet eden nesne: " + hit.transform.name);
+
+                // Eğer vurulan nesne bir düşmansa hasar metodunu çağır
+                if (hit.transform.CompareTag("Enemy"))
+                {
+                    // Damage methodunu çağırabilirsiniz,
+                }
+                break;
             }
         }
 
-    }
 
+    }
+    /// <summary>
+    /// mermi toplama methodu
+    /// </summary>
+    /// <param name="amount">eklenecek miktar</param>
     public void PickUpAmmoTrigger(int amount)
     {
         StartCoroutine(PickUpAmmo(amount));
