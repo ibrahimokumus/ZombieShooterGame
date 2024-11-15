@@ -1,23 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TaskController : MonoBehaviour
 {
+   
+    static string[] tasks =
+    {
+        "Finish The Tutorial",
+        "Find The Key",
+        "Destroy The Enemy",
+        "Find The Key",
+        "Beat The Boss"
+};
 
-    public static string Task1 = "Find The Key";
-    public static string Task2 = "Destroy The Enemy";
-    public static string Task3 = "Find The Key";
-    public static string Task4 = "Beat The Boss";
-
-
+     KeyController keyController;
     [SerializeField] Text taskText;
 
     private void Start()
     {
-        
+        keyController = FindObjectOfType<KeyController>();
+        taskText.text = tasks[keyController.taskOrderIndex];
     }
 
+    public void AssignTask()
+    {
+        Invoke("DelayUpdate", 3f);
+    }
 
+    void DelayUpdate ()
+    {
+        taskText.text = tasks[keyController.taskOrderIndex];
+    }
 }

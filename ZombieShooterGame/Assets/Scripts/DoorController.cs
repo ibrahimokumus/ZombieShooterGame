@@ -1,19 +1,24 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class DoorController : MonoBehaviour
 {
 
     [SerializeField] GameObject[] doors;
 
-
-
-
+    [SerializeField] Text doorOpenText;
+    [SerializeField] Animator canvasAnimator;
+    /// <summary>
+    /// Anahtar bulununca, kapiyi acan method 
+    /// </summary>
+    /// <param name="index">Acilmasi gereken kapi indisi</param>
+    /// <param name="angle">kapinin kac derece donecegi</param>
     public void OpenDoor(int index, float angle)
     {
         StartCoroutine(RotateDoorSmooth(index, angle));
         SoundController.instance.PlayAroundSounds(3);//kapi acilis sesi
+        canvasAnimator.SetTrigger("DoorOpenTrigger");
+        doorOpenText.text = "Somewhere, a door is opened ";
     }
 
     private IEnumerator RotateDoorSmooth(int index, float targetAngle)

@@ -187,6 +187,11 @@ public class PlayerController : MonoBehaviour
             SoundController.instance.PlayAroundSounds(2);
             other.gameObject.SetActive(false);
         }
+        if (other.gameObject.CompareTag("Key"))
+        {
+            other.gameObject.transform.parent.GetComponent<KeyController>().KeyPickUpKey();
+
+        }
     }
 
    

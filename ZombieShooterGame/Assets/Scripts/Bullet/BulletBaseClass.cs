@@ -11,7 +11,7 @@ public abstract class BulletBaseClass : MonoBehaviour
 
     
 
-    protected abstract void OnTriggerEnter(Collider other);
+   
 
    
 }
