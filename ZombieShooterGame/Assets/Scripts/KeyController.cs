@@ -10,10 +10,12 @@ public class KeyController : MonoBehaviour
 
     TaskController taskController;
     DoorController doorController;
+    
     private void Start()
     {
         taskController = FindObjectOfType<TaskController>();
         doorController = FindObjectOfType<DoorController>();   
+       
         foreach (var key in keys)
         {
             key.SetActive(false);// basta kapatiyoz hepsini, gorevler ilerldikce acacagiz
@@ -26,9 +28,15 @@ public class KeyController : MonoBehaviour
     public void KeyPickUpKey()
     {  
         keys[taskOrderIndex].SetActive(false);
-        SoundController.instance.PlayAroundSounds(4);
+        SoundController.instance.PlayAddictinalSounds(1);
         doorController.OpenDoor(taskOrderIndex,-160f);
         taskOrderIndex++;
+        if (keys.Length> taskOrderIndex)
+        {
+            keys[taskOrderIndex].SetActive(true);
+
+        }
+
 
     }
 

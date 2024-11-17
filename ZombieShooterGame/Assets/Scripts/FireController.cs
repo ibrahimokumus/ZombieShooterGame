@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,11 +17,12 @@ public class FireController : MonoBehaviour
     public Text bulletText;
     public int totalBullet = 100;
     ParticleEffectController particleEffectController;
-
+    EnemyBaseClass enemyBaseClass;
     private void Start()
     {
         bulletText.text = bulletCount.ToString() + " / " + totalBullet.ToString();
         particleEffectController = FindObjectOfType<ParticleEffectController>();
+        enemyBaseClass = FindObjectOfType<NunController>();
     }
 
     /// <summary>
@@ -33,7 +33,7 @@ public class FireController : MonoBehaviour
 
         SoundController.instance.PlaySoundEffect(0);
         particleEffectController.PlayParticleEffect("Muzzle");
-
+        Invoke("BulletShellSoundPlay",0.5f);// mermi kovani sesi gecikmeli cal
         bulletCount -= 1;
         bulletText.text = bulletCount.ToString() +" / "+ totalBullet.ToString();
         Vector3 rayOrigin = Camera.main.transform.position; // Kamera konumu
@@ -44,19 +44,17 @@ public class FireController : MonoBehaviour
         {
             if (!hit.collider.isTrigger)
             {
-                Debug.Log("Isabet eden nesne: " + hit.transform.name);
-
                 // Eğer vurulan nesne bir düşmansa hasar metodunu çağır
                 if (hit.transform.CompareTag("Enemy"))
                 {
-                    // Damage methodunu çağırabilirsiniz,
+                    enemyBaseClass.TakeDamage(5);
                 }
                 break;
             }
         }
 
-
     }
+
     /// <summary>
     /// mermi toplama methodu
     /// </summary>
@@ -75,4 +73,10 @@ public class FireController : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
     }
+
+    void BulletShellSoundPlay()
+    {
+        SoundController.instance.PlayAddictinalSounds(0);
+    }
+    
 }

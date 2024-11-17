@@ -9,6 +9,7 @@ public class DoorController : MonoBehaviour
     [SerializeField] Text doorOpenText;
     [SerializeField] Animator canvasAnimator;
     [SerializeField] TaskController taskController;
+    [SerializeField] NunController nunController;
     /// <summary>
     /// Anahtar bulununca, kapiyi acan method 
     /// </summary>
@@ -21,6 +22,11 @@ public class DoorController : MonoBehaviour
         canvasAnimator.SetTrigger("DoorOpenTrigger");
         doorOpenText.text = "Somewhere, a door is opened ";
         taskController.AssignTask();
+        if (index < 1)
+        {
+            nunController.canSeePlayer = true;
+        }
+       
     }
 
     private IEnumerator RotateDoorSmooth(int index, float targetAngle)

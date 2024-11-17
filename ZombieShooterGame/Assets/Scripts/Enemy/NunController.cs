@@ -5,84 +5,116 @@ using UnityEngine.AI;
 public class NunController : EnemyBaseClass
 {
 
+
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        agent.speed = speed;
+        animator = GetComponent<Animator>();
+        agent.speed = walkSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isDied) return;
 
-    }
-
-    protected override void Move()
-    {
-        // Zemin kontrolü
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundLayerMask);
-        if (isGrounded && _velocity.y < 0)
+        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+        if (canSeePlayer)
         {
-            _velocity.y = -2;
+            if (distanceToPlayer < detectionDistance)
+            {
+                Chase();
+            }
+            else
+            {
+                Patrol();
+            }
+        }
+        else
+        {
+            Patrol();
         }
 
 
-
-        /*
-
-        // Hedef konumu belirle
-        if (move.magnitude >= 0.1f)
-        {
-            Vector3 targetPosition = transform.position + move;
-            agent.SetDestination(targetPosition);
-        }
-
-        // Zýplama ve yer çekimi
-        _velocity.y += _gravity * Time.deltaTime;
-        if (isGrounded)
-        {
-            agent.baseOffset = _velocity.y * Time.deltaTime;
-        }
-
-        */
-
+        animator.SetFloat("Speed", agent.speed);// ajanin hizana bagli olarak, animasyonlar gecis yapar
     }
 
-    protected override void Jump()
+   
+
+    protected override void Attack()
     {
-        if (isGrounded)
+        if (Time.time > coolDownTimer)
         {
-            _velocity.y = Mathf.Sqrt(_jump * -2f * _gravity);
+            animator.SetTrigger("AttackTrigger");
+            coolDownTimer = Time.time + attackRate;
         }
     }
-    protected override void Attack(float damage)
-    {
-        throw new System.NotImplementedException();
-    }
 
-    protected override void TakeDamage(float takenDamage)
+    public override void TakeDamage(float takenDamage)
     {
-        throw new System.NotImplementedException();
+        health -= takenDamage;
+        if (health <= 0f)
+        {
+           // KeyUpComing();
+            Die();
+        }
+        else
+        {
+            animator.SetTrigger("TakenDamageTrigger");
+        }
     }
     protected override void Patrol()
     {
-        throw new System.NotImplementedException();
+        if (agent != null)
+        {
+            agent.speed = walkSpeed;
+            if (Vector3.Distance(patrolWayPoints[waypointIndex].position, transform.position) < agent.stoppingDistance)
+            {
+                waypointIndex = (waypointIndex + 1) % patrolWayPoints.Length;
+
+            }
+            agent.SetDestination(patrolWayPoints[waypointIndex].position);
+        }
     }
 
     protected override void Chase()
     {
-        throw new System.NotImplementedException();
+        if (agent != null)
+        {
+            agent.speed = runSpeed;
+            agent.SetDestination(player.transform.position);
+
+            if (Vector3.Distance(player.transform.position, transform.position) < attackRange)
+            {
+                agent.speed = 0f;
+                Attack();
+            }
+
+        }
     }
 
     protected override void Die()
     {
-        throw new System.NotImplementedException();
+        GetComponent<Collider>().enabled = false;
+        agent.enabled = false;
+        
+        isDied = true;
+        animator.SetTrigger("IsDiedTrigger");
+        
     }
 
+    /// <summary>
+    /// Sonraki gorecin acilmasi icin, anahtarin ortaya ciakran fonksiyon
+    /// </summary>
+    void KeyUpComing()
+    {
+        key.transform.parent = null;
+        key.gameObject.SetActive(true);
+        key.transform.position = transform.position;
+        key.transform.localScale = key.transform.localScale * 5f;
 
 
 
-    
+    }
 
-   
 }

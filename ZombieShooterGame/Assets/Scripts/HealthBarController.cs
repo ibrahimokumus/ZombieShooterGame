@@ -28,12 +28,6 @@ public class HealthBarController : MonoBehaviour
         {
             easeBarSlider.value = Mathf.Lerp(easeBarSlider.value, health, animationSpeed*Time.deltaTime);
         }
-
-
-        if (Input.GetKeyDown(KeyCode.T)) 
-        {
-            
-        }
     }
 
 

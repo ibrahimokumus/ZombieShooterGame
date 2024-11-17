@@ -4,31 +4,35 @@ using UnityEngine.AI;
 
 public abstract class EnemyBaseClass : MonoBehaviour
 {
-    protected float damageAmount;
-    protected float health;
-    protected float movementSpeed;
-    protected float detectionRange;
-    protected float attackRange;
-    protected Transform[] patrolWayPoints;
+    
+    [SerializeField] protected float health = 100f;
+    protected float runSpeed = 2.5f;
+    protected float walkSpeed = 1f;
+    protected float detectionDistance = 10f;
+    protected float attackRange = 1.6f;
+    [SerializeField] protected Transform[] patrolWayPoints;
     protected int experiencePoint;
-
+    protected int waypointIndex = 0;
     protected NavMeshAgent agent;
-    [SerializeField] protected float speed = 6f, _jump = 1f, _gravity = -9.8f;
-    [SerializeField] protected Transform groundCheck;
-    [SerializeField] protected float groundDistance = 0.3f;
-    [SerializeField] protected LayerMask groundLayerMask;
-    protected Vector3 _velocity;
-    protected bool isGrounded;
+    [SerializeField] protected GameObject player;
+    protected Animator animator;
 
+    [SerializeField] protected Transform key;
 
-    protected abstract void Move();
-    protected abstract void Jump();
-    protected abstract void TakeDamage(float takenDamage);
-    protected abstract void Attack(float damage);
+    public bool canSeePlayer = false;
+    protected float coolDownTimer;
+    protected float attackRate= 1f;
+
+    public bool isDied = false;
    
+    public abstract void TakeDamage(float takenDamage);
+    protected abstract void Attack();
+    
     protected abstract void Patrol();
 
     protected abstract void Die();
     protected abstract void Chase();
+
+   
 
 }

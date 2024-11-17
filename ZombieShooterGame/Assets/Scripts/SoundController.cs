@@ -13,12 +13,14 @@ public class SoundController : MonoBehaviour
     [SerializeField] private AudioClip[] fxClips;
     [SerializeField] private AudioClip[] playerClips;
     [SerializeField] private AudioClip[] fxAroundClips;
+    [SerializeField] private AudioClip[] addicionalClips;
 
     [SerializeField] private AudioSource backgroundAudioSource; 
     public AudioSource fxSource;         
     [SerializeField] private AudioSource playerAudioSource;
     [SerializeField] private AudioSource fxAroundAudioSource;
-
+    [SerializeField] private AudioSource addicionalAudioSource;
+    
     public bool isPlayMusic = true;
     public bool isPlayEffect = true;
     public bool isPlayRunning = true;
@@ -87,5 +89,11 @@ public class SoundController : MonoBehaviour
         fxAroundAudioSource.Play();
     }
 
-   
+    public void PlayAddictinalSounds(int index)
+    {
+        if(!addicionalAudioSource || addicionalClips == null || index < 0 || index >= addicionalClips.Length) return;
+        addicionalAudioSource.clip = addicionalClips[index];
+        addicionalAudioSource.Stop();
+        addicionalAudioSource.Play();
+    }
 }

@@ -9,6 +9,7 @@ TagManager:
   - HealItem
   - Coin
   - Key
+  - Weapon
   layers:
   - Default
   - TransparentFX
