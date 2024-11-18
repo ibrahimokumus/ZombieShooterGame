@@ -10,11 +10,13 @@ public class KeyController : MonoBehaviour
 
     TaskController taskController;
     DoorController doorController;
-    
+    EnemyBaseClass enemyBaseClass;
     private void Start()
     {
         taskController = FindObjectOfType<TaskController>();
-        doorController = FindObjectOfType<DoorController>();   
+        doorController = FindObjectOfType<DoorController>();
+        
+        
        
         foreach (var key in keys)
         {
@@ -31,15 +33,13 @@ public class KeyController : MonoBehaviour
         SoundController.instance.PlayAddictinalSounds(1);
         doorController.OpenDoor(taskOrderIndex,-160f);
         taskOrderIndex++;
-        if (keys.Length> taskOrderIndex)
-        {
-            keys[taskOrderIndex].SetActive(true);
-
-        }
-
-
+       
     }
 
-  
-   
+    public void MakeVisibleKey(int  keyIndex) 
+    {
+        if (keyIndex >= keys.Length) return;
+        keys[keyIndex].SetActive(true);
+    }
+
 }

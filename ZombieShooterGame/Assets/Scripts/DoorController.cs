@@ -20,7 +20,6 @@ public class DoorController : MonoBehaviour
         StartCoroutine(RotateDoorSmooth(index, angle));
         SoundController.instance.PlayAroundSounds(3);//kapi acilis sesi
         canvasAnimator.SetTrigger("DoorOpenTrigger");
-        doorOpenText.text = "Somewhere, a door is opened ";
         taskController.AssignTask();
         if (index < 1)
         {

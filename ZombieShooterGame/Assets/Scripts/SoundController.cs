@@ -41,16 +41,15 @@ public class SoundController : MonoBehaviour
     private void Start()
     {
         
-        //PlayBackgroundMusic();
+        //PlayBackgroundMusic(1);
     }
 
     // Arka plan müziðini çalma fonksiyonu
-    public void PlayBackgroundMusic()
+    public void PlayBackgroundMusic(int index)
     {
         if (!isPlayMusic || backgroundClips.Length == 0 || !backgroundAudioSource) return;// oynatcak bir sey yoksa
 
-        AudioClip randomClip = ChooseRandomClip(backgroundClips);
-        backgroundAudioSource.clip = randomClip;
+        backgroundAudioSource.clip = backgroundClips[index]; 
         backgroundAudioSource.Play();
     }
 
@@ -72,11 +71,6 @@ public class SoundController : MonoBehaviour
         playerAudioSource.Play();
     }
 
-    // Klip dizisinden rastgele klip seçme fonksiyonu
-    private AudioClip ChooseRandomClip(AudioClip[] clips)
-    {
-        return clips[Random.Range(0, clips.Length)];
-    }
 
     // Müzik aç/kapat iþlevi
     public void PlayAroundSounds(int index)

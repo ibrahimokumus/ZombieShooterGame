@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float groundDistance = 0.3f;
     [SerializeField] LayerMask groundLayerMask;
 
-    bool canMove = true;
+    public bool canMove = false;
 
     // [SerializeField] Button jumpButton;
     Vector3 _velocity;
@@ -38,8 +38,7 @@ public class PlayerController : MonoBehaviour
         fireController = GetComponent<FireController>();
         animator = GetComponent<Animator>();
 
-        Cursor.visible = false; // Mouse görünmez yap
-        Cursor.lockState = CursorLockMode.Locked;
+       
 
         povComponent = virtualCamera.GetCinemachineComponent<CinemachinePOV>();
         orijinalCamPos= virtualCamera.transform.position;
@@ -49,64 +48,68 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundLayerMask);
-
-        if (isGrounded && _velocity.y < 0)
-        {
-            _velocity.y = -2;
-        }
        
-
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-
-        animator.SetFloat("XDirection", x);
-        animator.SetFloat("ZDirection", z);
-        Vector3 move = transform.right * x + transform.forward * z;
-        animator.SetFloat("Speed", move.magnitude);
-        if ((z != 0f || x != 0f) && canMove)
+        if (canMove ==true)
         {
-            characterController.Move(move * _speed * Time.deltaTime);
-        }
+            isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundLayerMask);
 
-        _velocity.y += _gravity * Time.deltaTime;
-        characterController.Move(_velocity * Time.deltaTime);
+            if (isGrounded && _velocity.y < 0)
+            {
+                _velocity.y = -2;
+            }
 
-        if (Input.GetButtonDown("Jump") &&canMove)
-        {
-            Jump();
-        }
-        else
-        {
-            animator.SetBool("CanJump", false);
+
+            float x = Input.GetAxis("Horizontal");
+            float z = Input.GetAxis("Vertical");
+
+            animator.SetFloat("XDirection", x);
+            animator.SetFloat("ZDirection", z);
+            Vector3 move = transform.right * x + transform.forward * z;
+            animator.SetFloat("Speed", move.magnitude);
+            if ((z != 0f || x != 0f) && canMove)
+            {
+                characterController.Move(move * _speed * Time.deltaTime);
+            }
+
             _velocity.y += _gravity * Time.deltaTime;
             characterController.Move(_velocity * Time.deltaTime);
-        }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) &&  Time.time > fireController.gunTimer)
-        {
-            if (fireController.bulletCount <= 0 )
+            if (Input.GetButtonDown("Jump") && canMove)
             {
-                fireController.canFire = false;
-                SoundController.instance.PlaySoundEffect(1);
+                Jump();
             }
-            else if(fireController.canFire)
+            else
             {
-                animator.SetBool("IsShooting", true);
-                canMove = false;
-                fireController.Fire();
-                fireController.gunTimer = Time.time + fireController.autoFireRate; ;
+                animator.SetBool("CanJump", false);
+                _velocity.y += _gravity * Time.deltaTime;
+                characterController.Move(_velocity * Time.deltaTime);
             }
-        }
-        else
-        {
-            animator.SetBool("IsShooting", false);
-            canMove = true;
-        }
-      
 
-        PlayerRotateTheDirection();
-        ReloadingRifle();
+            if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time > fireController.gunTimer)
+            {
+                if (fireController.bulletCount <= 0)
+                {
+                    fireController.canFire = false;
+                    SoundController.instance.PlaySoundEffect(1);
+                }
+                else if (fireController.canFire)
+                {
+                    animator.SetBool("IsShooting", true);
+                    //canMove = false;
+                    fireController.Fire();
+                    fireController.gunTimer = Time.time + fireController.autoFireRate; ;
+                }
+            }
+            else
+            {
+                animator.SetBool("IsShooting", false);
+                canMove = true;
+            }
+
+
+            PlayerRotateTheDirection();
+            ReloadingRifle();
+        }
     }
 
     public void Jump()
@@ -153,7 +156,8 @@ public class PlayerController : MonoBehaviour
         {
             fireController.bulletCount += 1;
             fireController.totalBullet -= 1;
-            fireController.bulletText.text = fireController.bulletCount.ToString() +" / " + fireController.totalBullet.ToString();
+            fireController.bulletText.text = fireController.bulletCount.ToString();
+            fireController.totalBulletText.text = fireController.totalBullet.ToString();
             yield return new WaitForSeconds(0.05f);
         }
       

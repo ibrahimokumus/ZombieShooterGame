@@ -100,21 +100,10 @@ public class NunController : EnemyBaseClass
         
         isDied = true;
         animator.SetTrigger("IsDiedTrigger");
-        
+        KeyController keyController = FindObjectOfType<KeyController>();
+        keyController.MakeVisibleKey(keyController.taskOrderIndex);
     }
 
-    /// <summary>
-    /// Sonraki gorecin acilmasi icin, anahtarin ortaya ciakran fonksiyon
-    /// </summary>
-    void KeyUpComing()
-    {
-        key.transform.parent = null;
-        key.gameObject.SetActive(true);
-        key.transform.position = transform.position;
-        key.transform.localScale = key.transform.localScale * 5f;
-
-
-
-    }
+    
 
 }

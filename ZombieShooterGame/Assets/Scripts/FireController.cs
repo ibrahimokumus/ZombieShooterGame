@@ -15,12 +15,14 @@ public class FireController : MonoBehaviour
     public int bulletCount = 10;
     public int magazinAmount = 10;
     public Text bulletText;
+    public Text totalBulletText;
     public int totalBullet = 100;
     ParticleEffectController particleEffectController;
     EnemyBaseClass enemyBaseClass;
     private void Start()
     {
-        bulletText.text = bulletCount.ToString() + " / " + totalBullet.ToString();
+        bulletText.text = bulletCount.ToString();
+        totalBulletText.text = totalBullet.ToString();
         particleEffectController = FindObjectOfType<ParticleEffectController>();
         enemyBaseClass = FindObjectOfType<NunController>();
     }
@@ -35,7 +37,7 @@ public class FireController : MonoBehaviour
         particleEffectController.PlayParticleEffect("Muzzle");
         Invoke("BulletShellSoundPlay",0.5f);// mermi kovani sesi gecikmeli cal
         bulletCount -= 1;
-        bulletText.text = bulletCount.ToString() +" / "+ totalBullet.ToString();
+        bulletText.text = bulletCount.ToString();
         Vector3 rayOrigin = Camera.main.transform.position; // Kamera konumu
         Vector3 rayDirection = Camera.main.transform.forward; // Kamera yönü
 
@@ -63,13 +65,14 @@ public class FireController : MonoBehaviour
     {
         StartCoroutine(PickUpAmmo(amount));
     }
+
     IEnumerator PickUpAmmo(int amount)
     {
         // mermi toplama sesi cal
         for (int i = 0; i < amount; i++)
         {
             totalBullet += 1;
-            bulletText.text = bulletCount.ToString() + " / " + totalBullet.ToString();
+            totalBulletText.text = totalBullet.ToString();
             yield return new WaitForSeconds(0.05f);
         }
     }

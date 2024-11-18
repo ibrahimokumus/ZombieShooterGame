@@ -1,4 +1,5 @@
 
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,11 +13,11 @@ public class TaskController : MonoBehaviour
         "Destroy The Enemy",
         "Find The Key",
         "Beat The Boss"
-};
+    };
 
      KeyController keyController;
     [SerializeField] Text taskText;
-
+    [SerializeField] Animator animator;
     private void Start()
     {
         keyController = FindObjectOfType<KeyController>();
@@ -25,11 +26,16 @@ public class TaskController : MonoBehaviour
 
     public void AssignTask()
     {
-        Invoke("DelayUpdate", 3f);
+        StartCoroutine(DelayUpdate());
     }
 
-    void DelayUpdate ()
+
+    IEnumerator DelayUpdate()
     {
+        yield return new WaitForSeconds(3f);
+        animator.SetTrigger("TaskUpdateTrigger");
+        yield return new WaitForSeconds(3f);
         taskText.text = tasks[keyController.taskOrderIndex];
     }
+    
 }
