@@ -15,8 +15,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] LayerMask groundLayerMask;
 
     public bool canMove = false;
-
-    // [SerializeField] Button jumpButton;
+    public bool isDied = false;
+    
     Vector3 _velocity;
     bool isGrounded;
 
@@ -167,11 +167,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            healthBarController.Damage(10);
-            Debug.Log(other.gameObject.name);
-        }
+        
         if (other.gameObject.CompareTag("Bullet"))
         {
             fireController.PickUpAmmoTrigger(other.gameObject.GetComponent<BulletBaseClass>().bulletAmount);

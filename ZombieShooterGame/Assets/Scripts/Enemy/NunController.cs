@@ -45,6 +45,7 @@ public class NunController : EnemyBaseClass
     {
         if (Time.time > coolDownTimer)
         {
+           
             animator.SetTrigger("AttackTrigger");
             coolDownTimer = Time.time + attackRate;
         }
@@ -55,7 +56,6 @@ public class NunController : EnemyBaseClass
         health -= takenDamage;
         if (health <= 0f)
         {
-           // KeyUpComing();
             Die();
         }
         else
@@ -68,7 +68,7 @@ public class NunController : EnemyBaseClass
         if (agent != null)
         {
             agent.speed = walkSpeed;
-            if (Vector3.Distance(patrolWayPoints[waypointIndex].position, transform.position) < agent.stoppingDistance)
+            if (Vector3.Distance(patrolWayPoints[waypointIndex].position, transform.position) <= agent.stoppingDistance)
             {
                 waypointIndex = (waypointIndex + 1) % patrolWayPoints.Length;
 
@@ -87,6 +87,7 @@ public class NunController : EnemyBaseClass
             if (Vector3.Distance(player.transform.position, transform.position) < attackRange)
             {
                 agent.speed = 0f;
+                transform.LookAt(new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z));
                 Attack();
             }
 
@@ -101,7 +102,12 @@ public class NunController : EnemyBaseClass
         isDied = true;
         animator.SetTrigger("IsDiedTrigger");
         KeyController keyController = FindObjectOfType<KeyController>();
-        keyController.MakeVisibleKey(keyController.taskOrderIndex);
+        DoorController doorController = FindObjectOfType<DoorController>();
+        TaskController taskController = FindObjectOfType<TaskController>();
+        keyController.MakeVisibleKey(1);
+       // doorController.doorOrderIndex++;
+        taskController.taskOrderIndex++;
+        taskController.AssignTask();
     }
 
     

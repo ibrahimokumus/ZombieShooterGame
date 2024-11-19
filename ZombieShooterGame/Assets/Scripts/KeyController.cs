@@ -6,7 +6,7 @@ public class KeyController : MonoBehaviour
    
 
     [SerializeField] GameObject[] keys; 
-    public int taskOrderIndex = 0;
+   
 
     TaskController taskController;
     DoorController doorController;
@@ -15,8 +15,7 @@ public class KeyController : MonoBehaviour
     {
         taskController = FindObjectOfType<TaskController>();
         doorController = FindObjectOfType<DoorController>();
-        
-        
+                
        
         foreach (var key in keys)
         {
@@ -29,10 +28,14 @@ public class KeyController : MonoBehaviour
 
     public void KeyPickUpKey()
     {  
-        keys[taskOrderIndex].SetActive(false);
+        if(doorController.doorOrderIndex > keys.Length) return;
+        keys[doorController.doorOrderIndex].SetActive(false);
         SoundController.instance.PlayAddictinalSounds(1);
-        doorController.OpenDoor(taskOrderIndex,-160f);
-        taskOrderIndex++;
+        if(doorController.doorOrderIndex ==2) doorController.OpenDoor(doorController.doorOrderIndex+1, -160f);
+        else doorController.OpenDoor(doorController.doorOrderIndex, -160f);
+
+        doorController.doorOrderIndex++;
+        taskController.taskOrderIndex++;
        
     }
 

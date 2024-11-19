@@ -9,12 +9,12 @@ public class HealthBarController : MonoBehaviour
     public Slider easeBarSlider;
     [SerializeField] float maxHealth = 100f;
     public float health;
-    float animationSpeed = 1f;
+    float animationSpeed = 1.5f;
 
     // Start is called before the first frame update
     void Start()
     {
-        health = maxHealth-5f;
+        health = maxHealth-9f;
     }
 
     // Update is called once per frame
@@ -45,6 +45,7 @@ public class HealthBarController : MonoBehaviour
             if (health > maxHealth)
             {
                 health = maxHealth;
+                break;
             }
             yield return null;//sonraki frame bekle
         }
@@ -56,6 +57,10 @@ public class HealthBarController : MonoBehaviour
         if (health < 0)
         {
             health = 0;
+            PlayerController player =FindObjectOfType<PlayerController>();
+            player.canMove = false;
+            player.isDied = true;
+
         }
     }
 }

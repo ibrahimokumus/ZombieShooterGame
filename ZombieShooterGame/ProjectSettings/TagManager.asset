@@ -10,6 +10,7 @@ TagManager:
   - Coin
   - Key
   - Weapon
+  - Police
   layers:
   - Default
   - TransparentFX

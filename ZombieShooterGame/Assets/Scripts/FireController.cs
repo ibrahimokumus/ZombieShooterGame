@@ -12,19 +12,21 @@ public class FireController : MonoBehaviour
    
     public float distance;
 
-    public int bulletCount = 10;
+    public int bulletCount = 0;
     public int magazinAmount = 10;
     public Text bulletText;
     public Text totalBulletText;
-    public int totalBullet = 100;
+    public int totalBullet = 50;
     ParticleEffectController particleEffectController;
-    EnemyBaseClass enemyBaseClass;
+   [SerializeField] EnemyBaseClass[] enemyBaseControllers;
+
     private void Start()
     {
         bulletText.text = bulletCount.ToString();
         totalBulletText.text = totalBullet.ToString();
         particleEffectController = FindObjectOfType<ParticleEffectController>();
-        enemyBaseClass = FindObjectOfType<NunController>();
+       // enemyBaseControllers[0] = FindObjectOfType<NunController>();
+       // enemyBaseControllers[1] = FindObjectOfType<PoliceController>();
     }
 
     /// <summary>
@@ -49,7 +51,11 @@ public class FireController : MonoBehaviour
                 // Eğer vurulan nesne bir düşmansa hasar metodunu çağır
                 if (hit.transform.CompareTag("Enemy"))
                 {
-                    enemyBaseClass.TakeDamage(5);
+                    enemyBaseControllers[0].TakeDamage(15);
+                }
+                if (hit.transform.CompareTag("Police"))
+                {
+                    enemyBaseControllers[1].TakeDamage(10);
                 }
                 break;
             }

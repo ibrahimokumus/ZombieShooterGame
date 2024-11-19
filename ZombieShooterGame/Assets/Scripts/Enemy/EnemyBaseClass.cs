@@ -17,7 +17,7 @@ public abstract class EnemyBaseClass : MonoBehaviour
     [SerializeField] protected GameObject player;
     protected Animator animator;
 
-    [SerializeField] protected Transform key;
+    
 
     public bool canSeePlayer = false;
     protected float coolDownTimer;

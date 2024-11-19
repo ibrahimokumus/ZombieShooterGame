@@ -10,6 +10,8 @@ public class DoorController : MonoBehaviour
     [SerializeField] Animator canvasAnimator;
     [SerializeField] TaskController taskController;
     [SerializeField] NunController nunController;
+    [SerializeField] PoliceController policeController;
+    public int doorOrderIndex = 0;
     /// <summary>
     /// Anahtar bulununca, kapiyi acan method 
     /// </summary>
@@ -18,18 +20,24 @@ public class DoorController : MonoBehaviour
     public void OpenDoor(int index, float angle)
     {
         StartCoroutine(RotateDoorSmooth(index, angle));
-        SoundController.instance.PlayAroundSounds(3);//kapi acilis sesi
+        
         canvasAnimator.SetTrigger("DoorOpenTrigger");
         taskController.AssignTask();
         if (index < 1)
         {
             nunController.canSeePlayer = true;
+
+        }
+        else if (index < 2) 
+        {
+            policeController.canSeePlayer= true;
         }
        
     }
 
-    private IEnumerator RotateDoorSmooth(int index, float targetAngle)
+    public IEnumerator RotateDoorSmooth(int index, float targetAngle)
     {
+        SoundController.instance.PlayAroundSounds(3);//kapi acilis sesi
         float duration = 1.8f; // Donus suresi, degeri sesin uzunluguna gore verdim
         float elapsed = 0f;
 
