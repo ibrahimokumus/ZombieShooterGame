@@ -19,14 +19,14 @@ public class FireController : MonoBehaviour
     public int totalBullet = 50;
     ParticleEffectController particleEffectController;
    [SerializeField] EnemyBaseClass[] enemyBaseControllers;
+    RecoilController recoilController;
 
     private void Start()
     {
         bulletText.text = bulletCount.ToString();
         totalBulletText.text = totalBullet.ToString();
         particleEffectController = FindObjectOfType<ParticleEffectController>();
-       // enemyBaseControllers[0] = FindObjectOfType<NunController>();
-       // enemyBaseControllers[1] = FindObjectOfType<PoliceController>();
+        recoilController = FindObjectOfType<RecoilController>(); 
     }
 
     /// <summary>
@@ -42,7 +42,7 @@ public class FireController : MonoBehaviour
         bulletText.text = bulletCount.ToString();
         Vector3 rayOrigin = Camera.main.transform.position; // Kamera konumu
         Vector3 rayDirection = Camera.main.transform.forward; // Kamera yönü
-
+        recoilController.Recoil();// geri tepme
         RaycastHit[] hits = Physics.RaycastAll(rayOrigin, rayDirection, distance);
         foreach (RaycastHit hit in hits)
         {

@@ -1,0 +1,675 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.44f1 (c3ae09b9f03c) revision 12824073'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit Professional' Language: 'tr' Physical Memory: 32544 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.44f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+C:/Users/okumus/Unity/Techcareer/Ibrahim-Emir-Proje/ZombieShooterGame
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+52064
+Successfully changed project path to: C:/Users/okumus/Unity/Techcareer/Ibrahim-Emir-Proje/ZombieShooterGame
+C:/Users/okumus/Unity/Techcareer/Ibrahim-Emir-Proje/ZombieShooterGame
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [8064]  Target information:
+
+Player connection [8064]  * "[IP] 172.16.0.2 [Port] 0 [Flags] 2 [Guid] 1607601267 [EditorId] 1607601267 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-RCUAE56) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [8064]  * "[IP] 192.168.1.33 [Port] 0 [Flags] 2 [Guid] 1607601267 [EditorId] 1607601267 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-RCUAE56) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [8064] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [8064] Host joined alternative multi-casting on [225.0.0.222:34997]...
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+Refreshing native plugins compatible for Editor in 16.14 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.44f1 (c3ae09b9f03c)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.44f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/okumus/Unity/Techcareer/Ibrahim-Emir-Proje/ZombieShooterGame/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 4070 Ti (ID=0x2782)
+    Vendor:   NVIDIA
+    VRAM:     11996 MB
+    Driver:   32.0.15.6614
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.44f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.44f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.44f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56392
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.44f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.44f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.008454 seconds.
+- Loaded All Assemblies, in  0.624 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 280 ms
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.640 seconds
+Domain Reload Profiling: 1263ms
+	BeginReloadAssembly (239ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (79ms)
+	LoadAllAssembliesAndSetupDomain (256ms)
+		LoadAssemblies (241ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (250ms)
+			TypeCache.Refresh (249ms)
+				TypeCache.ScanAssembly (224ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (640ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (588ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (370ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (148ms)
+			ProcessInitializeOnLoadMethodAttributes (62ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.248 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.860 seconds
+Domain Reload Profiling: 2105ms
+	BeginReloadAssembly (201ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (23ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (46ms)
+	LoadAllAssembliesAndSetupDomain (948ms)
+		LoadAssemblies (625ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (445ms)
+			TypeCache.Refresh (387ms)
+				TypeCache.ScanAssembly (355ms)
+			ScanForSourceGeneratedMonoScriptInfo (43ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (860ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (678ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (19ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (97ms)
+			ProcessInitializeOnLoadAttributes (463ms)
+			ProcessInitializeOnLoadMethodAttributes (88ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 8.40 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5829 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 55 unused Assets / (2.6 MB). Loaded Objects now: 6281.
+Memory consumption went from 231.6 MB to 229.0 MB.
+Total: 6.735900 ms (FindLiveObjects: 0.425800 ms CreateObjectMapping: 0.360500 ms MarkObjects: 5.111500 ms  DeleteObjects: 0.836300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 3ead1caaecf1c488f20bcfeb224b6af5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 69002.856766 seconds.
+  path: Assets/Scripts/DoorController.cs
+  artifactKey: Guid(aee35cb5b9f31ba4e9ab7101a16fd748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DoorController.cs using Guid(aee35cb5b9f31ba4e9ab7101a16fd748) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '12ac601fe165dcfbc845520906dda798') in 0.002595 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 553.299015 seconds.
+  path: Assets/Scripts/PlayerController.cs
+  artifactKey: Guid(16be00d721370a846b60dde50286e4b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayerController.cs using Guid(16be00d721370a846b60dde50286e4b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '9019af7d3f1278f232726733cd9ed088') in 0.000927 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 30.515047 seconds.
+  path: Assets/Scripts/PlayerController.cs
+  artifactKey: Guid(16be00d721370a846b60dde50286e4b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayerController.cs using Guid(16be00d721370a846b60dde50286e4b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '35878ea61b45769caf7fa046c26e0fbe') in 0.000713 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 229.883207 seconds.
+  path: Assets/Scripts/PlayerController.cs
+  artifactKey: Guid(16be00d721370a846b60dde50286e4b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayerController.cs using Guid(16be00d721370a846b60dde50286e4b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: 'f025eb3a81cd67eab167f806dda846f4') in 0.000723 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.538 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.233 seconds
+Domain Reload Profiling: 1768ms
+	BeginReloadAssembly (166ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (40ms)
+	RebuildCommonClasses (35ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (31ms)
+	LoadAllAssembliesAndSetupDomain (290ms)
+		LoadAssemblies (326ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (52ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (24ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (1234ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (612ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (19ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (98ms)
+			ProcessInitializeOnLoadAttributes (416ms)
+			ProcessInitializeOnLoadMethodAttributes (68ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Refreshing native plugins compatible for Editor in 4.49 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5675 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 38 unused Assets / (2.6 MB). Loaded Objects now: 6296.
+Memory consumption went from 196.3 MB to 193.7 MB.
+Total: 5.860400 ms (FindLiveObjects: 0.316100 ms CreateObjectMapping: 0.127500 ms MarkObjects: 4.895200 ms  DeleteObjects: 0.520200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 3ead1caaecf1c488f20bcfeb224b6af5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 90f4f1ed88bd2607c6bd4c8a6aa0f3f4 -> e5eecab0d8a1e94fc49988cb64268dff
+========================================================================
+Received Import Request.
+  Time since last request: 226.408008 seconds.
+  path: Assets/BattleRoyale
+  artifactKey: Guid(f100780bffe0f1e4bb80d9624aae25d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale using Guid(f100780bffe0f1e4bb80d9624aae25d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '5c73097c75dee643caa683dde5b8be79') in 0.013674 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.655433 seconds.
+  path: Assets/BattleRoyale/Animation
+  artifactKey: Guid(3e3acbd9a6011914392242b82bfe430f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation using Guid(3e3acbd9a6011914392242b82bfe430f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '6b4a135f344a3033a5d4742c21a5a58c') in 0.000926 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.147336 seconds.
+  path: Assets/BattleRoyale/Animation/AssaultRifleStance
+  artifactKey: Guid(0deddb07b66c38c4cae5ba358e4f4157) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/AssaultRifleStance using Guid(0deddb07b66c38c4cae5ba358e4f4157) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: 'ea01ce0ad30a10f9cb1beba354f6bb8b') in 0.000916 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.062907 seconds.
+  path: Assets/BattleRoyale/Animation/AssaultRifleStance/AimOffsetDown_AR_Anim.fbx
+  artifactKey: Guid(24fdd14d8812d594ab8e8c016a5d6a79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/AssaultRifleStance/AimOffsetDown_AR_Anim.fbx using Guid(24fdd14d8812d594ab8e8c016a5d6a79) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '92fa66a6e2cd25ddd1b8502ce4e62961') in 0.229800 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/BattleRoyale/Animation/AssaultRifleStance/Reloading_AR_Anim.fbx
+  artifactKey: Guid(d6cece2fa022c07428fe9842aa276f3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/AssaultRifleStance/Reloading_AR_Anim.fbx using Guid(d6cece2fa022c07428fe9842aa276f3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '1d730660387874165cb2ab0496621b61') in 0.055536 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/BattleRoyale/Animation/AssaultRifleStance/IdleNormal01_AR_Anim.fbx
+  artifactKey: Guid(1710421ba2cde9740b32e06c943f1bec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/AssaultRifleStance/IdleNormal01_AR_Anim.fbx using Guid(1710421ba2cde9740b32e06c943f1bec) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '3c63339ad99a111587fd0f6388d79d47') in 0.037683 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/BattleRoyale/Animation/AssaultRifleStance/Die_AR_Anim.fbx
+  artifactKey: Guid(32bacd17c736a25499e5fd8c37b7e184) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/AssaultRifleStance/Die_AR_Anim.fbx using Guid(32bacd17c736a25499e5fd8c37b7e184) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: 'c7c7b2855e876b63625503cb7e766ed7') in 0.049204 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/BattleRoyale/Animation/AssaultRifleStance/ShootSingleshot_AR_Anim.fbx
+  artifactKey: Guid(c7815796c0403034892dc2141e431e86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/AssaultRifleStance/ShootSingleshot_AR_Anim.fbx using Guid(c7815796c0403034892dc2141e431e86) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: 'd32498090606255e722f43dd240af4ff') in 0.042725 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/BattleRoyale/Animation/AssaultRifleStance/DashFWD_AR_Anim.fbx
+  artifactKey: Guid(77d5acb90e317c64e84333c3229e73c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/AssaultRifleStance/DashFWD_AR_Anim.fbx using Guid(77d5acb90e317c64e84333c3229e73c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: 'd47539119e1049643af8fe603a7f3b28') in 0.039788 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/BattleRoyale/Animation/AssaultRifleStance/RunBWD_AR_Anim.fbx
+  artifactKey: Guid(6057230fa54d24348beb70d65eea7e8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/AssaultRifleStance/RunBWD_AR_Anim.fbx using Guid(6057230fa54d24348beb70d65eea7e8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: 'd82d545d4426a64c82929616e815957b') in 0.043739 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/BattleRoyale/Animation/AssaultRifleStance/ShootAutoshot_AR_Anim.fbx
+  artifactKey: Guid(3b8230457e8544f48aadc4043951bf47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/AssaultRifleStance/ShootAutoshot_AR_Anim.fbx using Guid(3b8230457e8544f48aadc4043951bf47) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '05101aab544b281e018e639054bfc70c') in 0.033727 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/BattleRoyale/Animation/AssaultRifleStance/JumpStart_AR_Anim.fbx
+  artifactKey: Guid(7f381b92414a1574d9acdfd895bedd5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/AssaultRifleStance/JumpStart_AR_Anim.fbx using Guid(7f381b92414a1574d9acdfd895bedd5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '1d9203a6b84b9e3231c6e0fc42d7f240') in 0.048558 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/BattleRoyale/Animation/AssaultRifleStance/DashLeft_RM_AR_Anim.fbx
+  artifactKey: Guid(8c0d58aa4a285b14ea860c46a7d3c896) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/AssaultRifleStance/DashLeft_RM_AR_Anim.fbx using Guid(8c0d58aa4a285b14ea860c46a7d3c896) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '5a642290b86e826d096623f8c6072b54') in 0.051987 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/BattleRoyale/Animation/AssaultRifleStance/RollLeft_AR_Anim.fbx
+  artifactKey: Guid(f682a1aab71f669498f83eca508939c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/AssaultRifleStance/RollLeft_AR_Anim.fbx using Guid(f682a1aab71f669498f83eca508939c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: 'c2d5a47f288c5c84ee895fd321e3f362') in 0.052774 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/BattleRoyale/Animation/AssaultRifleStance/Jump_AR_Anim.fbx
+  artifactKey: Guid(f8f0f42d295647c4d81dd888038d9db3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/AssaultRifleStance/Jump_AR_Anim.fbx using Guid(f8f0f42d295647c4d81dd888038d9db3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '5923102083f25fc20df370daf0e23f1d') in 0.044094 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/BattleRoyale/Animation/AssaultRifleStance/RunLeft_RM_AR_Anim.fbx
+  artifactKey: Guid(7879b49ba6913d54cb127c28edf06c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/AssaultRifleStance/RunLeft_RM_AR_Anim.fbx using Guid(7879b49ba6913d54cb127c28edf06c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '15d308f5dc9814540e335289624cd3d6') in 0.041891 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/BattleRoyale/Animation/AssaultRifleStance/Dizzy_AR_Anim.fbx
+  artifactKey: Guid(98c72f39b2d91094880c7739563dfaf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/AssaultRifleStance/Dizzy_AR_Anim.fbx using Guid(98c72f39b2d91094880c7739563dfaf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: 'e3012218be212f9306f23533075ee577') in 0.045044 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/BattleRoyale/Animation/AssaultRifleStance/DashRight_RM_AR_Anim.fbx
+  artifactKey: Guid(32cfab2ab7f712b43b27aed3744286be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/AssaultRifleStance/DashRight_RM_AR_Anim.fbx using Guid(32cfab2ab7f712b43b27aed3744286be) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '21e13d54d2650a08fc78f5725354a2bc') in 0.047599 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/BattleRoyale/Animation/AssaultRifleStance/RunFWD_RM_AR_Anim.fbx
+  artifactKey: Guid(884f656ba71069445bf8810ea77bfd60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/AssaultRifleStance/RunFWD_RM_AR_Anim.fbx using Guid(884f656ba71069445bf8810ea77bfd60) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '1a354248cdcdc1d25e531e1528eeb98b') in 0.048542 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/BattleRoyale/Animation/AssaultRifleStance/Knockdown_AR_Anim.fbx
+  artifactKey: Guid(478bc62f21ba5d04f82baf5accc5956a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/AssaultRifleStance/Knockdown_AR_Anim.fbx using Guid(478bc62f21ba5d04f82baf5accc5956a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '42617ecf05ab3d65da95698c527867b8') in 0.047937 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/BattleRoyale/Animation/AssaultRifleStance/GetHit01_AR_Anim.fbx
+  artifactKey: Guid(0fef4b0648503a245bd9aa917cccc3c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/AssaultRifleStance/GetHit01_AR_Anim.fbx using Guid(0fef4b0648503a245bd9aa917cccc3c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '387e5021b0def14ca6dc0064f94c9803') in 0.053054 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/BattleRoyale/Animation/AssaultRifleStance/JumpAir_AR_Anim.fbx
+  artifactKey: Guid(74cc8fce42f03de429dc05894ddba4b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/AssaultRifleStance/JumpAir_AR_Anim.fbx using Guid(74cc8fce42f03de429dc05894ddba4b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '89ea5d5261ea82bcc84381acd0dd8dc6') in 0.044758 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/BattleRoyale/Animation/AssaultRifleStance/RollRight_RM_AR_Anim.fbx
+  artifactKey: Guid(7abcfb765a2b35048ba21f2523ed22d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/AssaultRifleStance/RollRight_RM_AR_Anim.fbx using Guid(7abcfb765a2b35048ba21f2523ed22d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '00daa7ff36a754157cdcf6c3a635eee9') in 0.044810 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/BattleRoyale/Animation/AssaultRifleStance/RollBWD_RM_AR_Anim.fbx
+  artifactKey: Guid(4fc43570fec9a0541a3e2dc6d86e7244) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/AssaultRifleStance/RollBWD_RM_AR_Anim.fbx using Guid(4fc43570fec9a0541a3e2dc6d86e7244) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '4e5d78a11bf5d8dfa2efd6d5e2506519') in 0.049435 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/BattleRoyale/Animation/AssaultRifleStance/DashBWD_AR_Anim.fbx
+  artifactKey: Guid(e95e303f373e41043b2f195b1c9171f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/AssaultRifleStance/DashBWD_AR_Anim.fbx using Guid(e95e303f373e41043b2f195b1c9171f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '3c707ed4869ec15ecdded375908ab453') in 0.058839 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+========================================================================
+Received Import Request.
+  Time since last request: 4.369525 seconds.
+  path: Assets/BattleRoyale/Animation/HandGunStance/DashBWD_HG01_Anim.fbx
+  artifactKey: Guid(98389547ab4a2cc4286acd2f1f496fd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/HandGunStance/DashBWD_HG01_Anim.fbx using Guid(98389547ab4a2cc4286acd2f1f496fd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: '0a04c7401215814f6942667d1f010f73') in 0.071025 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/BattleRoyale/Animation/HandGunStance/DashFWD_RM_HG01_Anim.fbx
+  artifactKey: Guid(07aaec723862cd24e92a0323f7f4d48e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/HandGunStance/DashFWD_RM_HG01_Anim.fbx using Guid(07aaec723862cd24e92a0323f7f4d48e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: 'f23de39b6f4b2ff10e215e2926d447dd') in 0.050668 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+========================================================================
+Received Import Request.
+  Time since last request: 0.183983 seconds.
+  path: Assets/BattleRoyale/Animation/HandGunStance/ShootAutoshot_HG01_Anim.fbx
+  artifactKey: Guid(62c12afd7e6cc30428c1eead7bc19784) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BattleRoyale/Animation/HandGunStance/ShootAutoshot_HG01_Anim.fbx using Guid(62c12afd7e6cc30428c1eead7bc19784) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
+ -> (artifact id: 'fcdbc572daadf42088ea70497e6f6f87') in 0.037050 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 95
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: Bir iþ parçacýðý çýkýþý veya bir uygulama isteði nedeniyle G/Ç iþlemi iptal edildi.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

@@ -8,7 +8,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
-    private CharacterController characterController;
+   
     [SerializeField] private float _speed = 6f, _jump = 1f, _gravity = -9.8f;
     [SerializeField] Transform groundCheck;
     [SerializeField] float groundDistance = 0.3f;
@@ -21,16 +21,22 @@ public class PlayerController : MonoBehaviour
     bool isGrounded;
 
     Animator animator;
-    [SerializeField] CinemachineVirtualCamera virtualCamera;
-    [SerializeField] float sensitivity = 100f;
-    private CinemachinePOV povComponent;
+   
+    [SerializeField] float sensitivity = 10f;
     Vector3 orijinalCamPos;
 
-
-    #region Deneme
+    [SerializeField] float minAimLimit = -0.7f;
+    [SerializeField] float maxAimLimit = 0.9f;
+    [SerializeField] float aimAnimationSensitivity = 0.1f;
+         
+    #region Component Fields
     FireController fireController;
     HealthBarController healthBarController;
+    private CharacterController characterController;
+    [SerializeField] CinemachineVirtualCamera virtualCamera;
+    private CinemachinePOV povComponent;
     #endregion
+
     private void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -38,7 +44,6 @@ public class PlayerController : MonoBehaviour
         fireController = GetComponent<FireController>();
         animator = GetComponent<Animator>();
 
-       
 
         povComponent = virtualCamera.GetCinemachineComponent<CinemachinePOV>();
         orijinalCamPos= virtualCamera.transform.position;
@@ -58,6 +63,9 @@ public class PlayerController : MonoBehaviour
                 _velocity.y = -2;
             }
 
+            float aimVertical = animator.GetFloat("AimVertical") + Input.GetAxis("Mouse Y") * aimAnimationSensitivity * Time.deltaTime;
+            aimVertical = Mathf.Clamp(aimVertical, minAimLimit, maxAimLimit); // Aim sýnýrlarýný belirleyin
+            animator.SetFloat("AimVertical", aimVertical);
 
             float x = Input.GetAxis("Horizontal");
             float z = Input.GetAxis("Vertical");
@@ -94,15 +102,18 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (fireController.canFire)
                 {
-                    animator.SetBool("IsShooting", true);
+                   // animator.SetBool("IsShooting", true);
                     //canMove = false;
                     fireController.Fire();
-                    fireController.gunTimer = Time.time + fireController.autoFireRate; ;
+                    fireController.gunTimer = Time.time + fireController.autoFireRate;
+                    animator.SetTrigger("ShootingTrigger");
+                    animator.SetLayerWeight(1, 1); 
                 }
             }
             else
             {
-                animator.SetBool("IsShooting", false);
+               
+               // animator.SetLayerWeight(1, 0);
                 canMove = true;
             }
 
@@ -129,8 +140,6 @@ public class PlayerController : MonoBehaviour
         float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
         // Karakteri saða-sola döndür
         transform.Rotate(Vector3.up, mouseX);
-       // transform.Rotate(Vector3.left, mouseY);
-        // Kameranýn yatay eksenini karakterin y eksenine göre ayarla
         povComponent.m_HorizontalAxis.Value = transform.eulerAngles.y;
 
     }
@@ -202,4 +211,43 @@ public class PlayerController : MonoBehaviour
     }
 
 
+/*
+    void XXX()
+    {
+           
+
+            // Aim kontrolü için fare hareketi
+            // float aimVertical = Input.GetAxis("Mouse Y");
+            // Aim kontrolünde sabit kalma için deðer birikimi
+            float aimVertical = animator.GetFloat("AimVertical") + Input.GetAxis("Mouse Y") * aimSensitivity * Time.deltaTime;
+            aimVertical = Mathf.Clamp(aimVertical, minAimLimit, maxAimLimit); // Aim sýnýrlarýný belirleyin
+            animator.SetFloat("AimVertical", aimVertical);
+
+
+            if (animator != null)
+            {
+                // Yürüme durumunu belirleme
+                bool isWalking = x != 0 || y != 0;
+                animator.SetBool("Walk", isWalking);
+
+                // AimVertical parametresini blend tree ile kullanmak üzere ayarlama
+                animator.SetFloat("AimVertical", aimVertical);
+
+                // Ateþ etme kontrolü (Mouse0 basýlýysa)
+                if (Input.GetKey(KeyCode.Mouse0))
+                {
+                    animator.SetLayerWeight(1, 1); // Ýkinci layer aktif
+                    animator.SetBool("IsDamage", true);
+                }
+                else
+                {
+                    // animator.SetLayerWeight(1, 0); // Ýkinci layer pasif
+                    animator.SetBool("IsDamage", false);
+                }
+
+                // Üçüncü layer için aim animasyonlarý kontrolü
+                animator.SetLayerWeight(2, 1); // Üçüncü layer aktif tutuluyor
+            }
+    }*/
+    
 }
