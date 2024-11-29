@@ -35,4 +35,12 @@ public class ParticleEffectController : MonoBehaviour
             particles.Play();
         }
     }
+
+
+    public ParticleSystem[] GetParticleEffects(string effectName)
+    {
+        return particleEffects[effectName]; 
+    }
+
+
 }

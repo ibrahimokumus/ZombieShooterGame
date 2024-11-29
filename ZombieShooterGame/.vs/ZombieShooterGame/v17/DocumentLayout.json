@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|c:\\users\\okumus\\unity\\techcareer\\ibrahim-emir-proje\\zombieshootergame\\assets\\scripts\\recoilcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\recoilcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\assets\\scripts\\healthbarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\healthbarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|c:\\users\\okumus\\unity\\techcareer\\ibrahim-emir-proje\\zombieshootergame\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\assets\\scripts\\firecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\firecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|c:\\users\\okumus\\unity\\techcareer\\ibrahim-emir-proje\\zombieshootergame\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|c:\\users\\okumus\\unity\\techcareer\\ibrahim-emir-proje\\zombieshootergame\\assets\\scripts\\particleeffectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\particleeffectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|c:\\users\\okumus\\unity\\techcareer\\ibrahim-emir-proje\\zombieshootergame\\assets\\scripts\\recoilcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\recoilcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\assets\\scripts\\weapondamagecontoller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\assets\\scripts\\healthbarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\healthbarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FC36059A-A204-5878-0882-E9AB7AE1A362}|Assembly-CSharp.csproj|C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\assets\\scripts\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -69,12 +73,25 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 229,
+          "DockedWidth": 152,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "ParticleEffectController.cs",
+              "DocumentMoniker": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\ParticleEffectController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ParticleEffectController.cs",
+              "ToolTip": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\ParticleEffectController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ParticleEffectController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T12:45:33.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "RecoilController.cs",
               "DocumentMoniker": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\RecoilController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\RecoilController.cs",
@@ -87,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "WeaponDamageContoller.cs",
               "DocumentMoniker": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\WeaponDamageContoller.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\WeaponDamageContoller.cs",
@@ -99,7 +116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "PoliceController.cs",
               "DocumentMoniker": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\Enemy\\PoliceController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\PoliceController.cs",
@@ -111,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "MainMenuController.cs",
               "DocumentMoniker": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\MainMenuController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenuController.cs",
@@ -123,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "EnemyBaseClass.cs",
               "DocumentMoniker": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\Enemy\\EnemyBaseClass.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyBaseClass.cs",
@@ -135,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "SingleBullet.cs",
               "DocumentMoniker": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\Bullet\\SingleBullet.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet\\SingleBullet.cs",
@@ -147,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "TaskController.cs",
               "DocumentMoniker": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\TaskController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TaskController.cs",
@@ -159,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "KeyController.cs",
               "DocumentMoniker": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\KeyController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\KeyController.cs",
@@ -171,20 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FireController.cs",
-              "DocumentMoniker": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\FireController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\FireController.cs",
-              "ToolTip": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\FireController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\FireController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T23:24:50.478Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
@@ -197,12 +201,12 @@
           ]
         },
         {
-          "DockedWidth": 171,
-          "SelectedChildIndex": 4,
+          "DockedWidth": 248,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "DoorController.cs",
               "DocumentMoniker": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\DoorController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\DoorController.cs",
@@ -214,7 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "NunController.cs",
               "DocumentMoniker": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\Enemy\\NunController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\NunController.cs",
@@ -226,19 +230,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "HealthBarController.cs",
               "DocumentMoniker": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\HealthBarController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\HealthBarController.cs",
               "ToolTip": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\HealthBarController.cs",
               "RelativeToolTip": "Assets\\Scripts\\HealthBarController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwD0AAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T10:47:55.054Z"
+              "WhenOpened": "2024-11-13T10:47:55.054Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "SoundController.cs",
               "DocumentMoniker": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\SoundController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SoundController.cs",
@@ -250,15 +255,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
               "ToolTip": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAB1AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAK8AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-06T12:55:25.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FireController.cs",
+              "DocumentMoniker": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\FireController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\FireController.cs",
+              "ToolTip": "C:\\Users\\okumus\\Unity\\Techcareer\\Ibrahim-Emir-Proje\\ZombieShooterGame\\Assets\\Scripts\\FireController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\FireController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAwwEkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T23:24:50.478Z",
               "EditorCaption": ""
             }
           ]

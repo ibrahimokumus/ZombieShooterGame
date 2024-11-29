@@ -58,8 +58,8 @@ public class HealthBarController : MonoBehaviour
         {
             health = 0;
             PlayerController player =FindObjectOfType<PlayerController>();
-            player.canMove = false;
-            player.isDied = true;
+            //player.canMove = false;
+           // player.isDied = true;
 
         }
     }

@@ -8,7 +8,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
-   
+
     [SerializeField] private float _speed = 6f, _jump = 1f, _gravity = -9.8f;
     [SerializeField] Transform groundCheck;
     [SerializeField] float groundDistance = 0.3f;
@@ -16,19 +16,19 @@ public class PlayerController : MonoBehaviour
 
     public bool canMove = false;
     public bool isDied = false;
-    
+
     Vector3 _velocity;
     bool isGrounded;
 
     Animator animator;
-   
+
     [SerializeField] float sensitivity = 10f;
     Vector3 orijinalCamPos;
 
     [SerializeField] float minAimLimit = -0.7f;
     [SerializeField] float maxAimLimit = 0.9f;
     [SerializeField] float aimAnimationSensitivity = 0.1f;
-         
+    bool isReloading = false;
     #region Component Fields
     FireController fireController;
     HealthBarController healthBarController;
@@ -46,15 +46,15 @@ public class PlayerController : MonoBehaviour
 
 
         povComponent = virtualCamera.GetCinemachineComponent<CinemachinePOV>();
-        orijinalCamPos= virtualCamera.transform.position;
+        orijinalCamPos = virtualCamera.transform.position;
 
-        
+
     }
 
     private void Update()
     {
-       
-        if (canMove ==true)
+
+        if (canMove == true)
         {
             isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundLayerMask);
 
@@ -102,24 +102,29 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (fireController.canFire)
                 {
-                   // animator.SetBool("IsShooting", true);
+                    // animator.SetBool("IsShooting", true);
                     //canMove = false;
                     fireController.Fire();
                     fireController.gunTimer = Time.time + fireController.autoFireRate;
                     animator.SetTrigger("ShootingTrigger");
-                    animator.SetLayerWeight(1, 1); 
+                    animator.SetLayerWeight(1, 1);
                 }
             }
             else
             {
-               
-               // animator.SetLayerWeight(1, 0);
+
+                // animator.SetLayerWeight(1, 0);
                 canMove = true;
+            }
+
+            if (Input.GetKeyDown(KeyCode.R) && fireController.bulletCount < fireController.magazinAmount && fireController.totalBullet > 0 && !isReloading)
+            {
+                ReloadingRifle();
             }
 
 
             PlayerRotateTheDirection();
-            ReloadingRifle();
+
         }
     }
 
@@ -128,7 +133,7 @@ public class PlayerController : MonoBehaviour
         if (isGrounded)
         {
             _velocity.y = Mathf.Sqrt(_jump * -2f * _gravity);
-            animator.SetBool("CanJump",true);
+            animator.SetBool("CanJump", true);
         }
     }
 
@@ -144,39 +149,38 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    
+
     void ReloadingRifle()
     {
-        if (Input.GetKeyDown(KeyCode.R) && fireController.bulletCount < fireController.magazinAmount && fireController.totalBullet > 0)
-        {
-            animator.SetTrigger("ReloadTrigger");
-            StartCoroutine(ReloadWaiting());
-            SoundController.instance.PlaySoundEffect(2);
-        }
+        isReloading = true;
+        animator.SetTrigger("ReloadTrigger");
+        StartCoroutine(ReloadWaiting());
+        SoundController.instance.PlaySoundEffect(2);
     }
 
 
     IEnumerator ReloadWaiting()
-    { 
+    {
         fireController.canFire = false;
         yield return new WaitForSeconds(4f);
         SoundController.instance.fxSource.Stop();
         for (int i = fireController.bulletCount; i < fireController.magazinAmount; i++)
         {
+            if (fireController.totalBullet <= 0) break;
             fireController.bulletCount += 1;
             fireController.totalBullet -= 1;
             fireController.bulletText.text = fireController.bulletCount.ToString();
             fireController.totalBulletText.text = fireController.totalBullet.ToString();
             yield return new WaitForSeconds(0.05f);
         }
-      
+        isReloading = false;
         fireController.canFire = true;
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
-        
+
         if (other.gameObject.CompareTag("Bullet"))
         {
             fireController.PickUpAmmoTrigger(other.gameObject.GetComponent<BulletBaseClass>().bulletAmount);
@@ -203,7 +207,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-   
+
     IEnumerator BulletActivate(GameObject obj)
     {
         yield return new WaitForSeconds(5f);
@@ -211,43 +215,43 @@ public class PlayerController : MonoBehaviour
     }
 
 
-/*
-    void XXX()
-    {
-           
-
-            // Aim kontrolü için fare hareketi
-            // float aimVertical = Input.GetAxis("Mouse Y");
-            // Aim kontrolünde sabit kalma için deðer birikimi
-            float aimVertical = animator.GetFloat("AimVertical") + Input.GetAxis("Mouse Y") * aimSensitivity * Time.deltaTime;
-            aimVertical = Mathf.Clamp(aimVertical, minAimLimit, maxAimLimit); // Aim sýnýrlarýný belirleyin
-            animator.SetFloat("AimVertical", aimVertical);
+    /*
+        void XXX()
+        {
 
 
-            if (animator != null)
-            {
-                // Yürüme durumunu belirleme
-                bool isWalking = x != 0 || y != 0;
-                animator.SetBool("Walk", isWalking);
-
-                // AimVertical parametresini blend tree ile kullanmak üzere ayarlama
+                // Aim kontrolü için fare hareketi
+                // float aimVertical = Input.GetAxis("Mouse Y");
+                // Aim kontrolünde sabit kalma için deðer birikimi
+                float aimVertical = animator.GetFloat("AimVertical") + Input.GetAxis("Mouse Y") * aimSensitivity * Time.deltaTime;
+                aimVertical = Mathf.Clamp(aimVertical, minAimLimit, maxAimLimit); // Aim sýnýrlarýný belirleyin
                 animator.SetFloat("AimVertical", aimVertical);
 
-                // Ateþ etme kontrolü (Mouse0 basýlýysa)
-                if (Input.GetKey(KeyCode.Mouse0))
-                {
-                    animator.SetLayerWeight(1, 1); // Ýkinci layer aktif
-                    animator.SetBool("IsDamage", true);
-                }
-                else
-                {
-                    // animator.SetLayerWeight(1, 0); // Ýkinci layer pasif
-                    animator.SetBool("IsDamage", false);
-                }
 
-                // Üçüncü layer için aim animasyonlarý kontrolü
-                animator.SetLayerWeight(2, 1); // Üçüncü layer aktif tutuluyor
-            }
-    }*/
-    
+                if (animator != null)
+                {
+                    // Yürüme durumunu belirleme
+                    bool isWalking = x != 0 || y != 0;
+                    animator.SetBool("Walk", isWalking);
+
+                    // AimVertical parametresini blend tree ile kullanmak üzere ayarlama
+                    animator.SetFloat("AimVertical", aimVertical);
+
+                    // Ateþ etme kontrolü (Mouse0 basýlýysa)
+                    if (Input.GetKey(KeyCode.Mouse0))
+                    {
+                        animator.SetLayerWeight(1, 1); // Ýkinci layer aktif
+                        animator.SetBool("IsDamage", true);
+                    }
+                    else
+                    {
+                        // animator.SetLayerWeight(1, 0); // Ýkinci layer pasif
+                        animator.SetBool("IsDamage", false);
+                    }
+
+                    // Üçüncü layer için aim animasyonlarý kontrolü
+                    animator.SetLayerWeight(2, 1); // Üçüncü layer aktif tutuluyor
+                }
+        }*/
+
 }

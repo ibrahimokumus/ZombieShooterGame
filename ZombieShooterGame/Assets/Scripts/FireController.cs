@@ -48,14 +48,30 @@ public class FireController : MonoBehaviour
         {
             if (!hit.collider.isTrigger)
             {
+                ParticleSystem[] bloodEffect = particleEffectController.GetParticleEffects("Blood");
                 // Eğer vurulan nesne bir düşmansa hasar metodunu çağır
                 if (hit.transform.CompareTag("Enemy"))
                 {
                     enemyBaseControllers[0].TakeDamage(15);
+                    
+                    foreach (ParticleSystem effect in bloodEffect)
+                    {
+                        effect.transform.position = hit.point;
+                        effect.transform.rotation = Quaternion.LookRotation(hit.normal);
+                        effect.Stop();
+                        effect.Play();
+                    }
                 }
                 if (hit.transform.CompareTag("Police"))
                 {
                     enemyBaseControllers[1].TakeDamage(10);
+                    foreach (ParticleSystem effect in bloodEffect)
+                    {
+                        effect.transform.position = hit.point;
+                        effect.transform.rotation = Quaternion.LookRotation(hit.normal);
+                        effect.Stop();
+                        effect.Play();
+                    }
                 }
                 break;
             }
